@@ -10,6 +10,11 @@
 * Each ASC serves 5 Users [all the time]. We assume that 5 Users(it is seemed as 1 group) will always go toward the same direction. Also, that ASC will be in the center of each group.
 * If there is any two ASCs getting closer to each other and hence cause servere interference. We will determine to close one of them. In other words, there will be only one ASC to serve these 10 Users(2 group). But the closed ASC is still in the center of the original group.
 
+![image](https://github.com/locoling/ML_for_IM_in_ASC/blob/main/System_Architecture.png)
+
+* We consider a scenario of providing drone-assisted mobile network services for multiple group users. 
+* The joint random waypoint mobility (RWM) and reference point group mobility (RPGM) model are adopted to determine the group’s motion behaviors.
+
 ## Start from the main.m
 In the **main.m**, we compare four methods:
 
