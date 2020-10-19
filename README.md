@@ -57,4 +57,5 @@ Using two methods
 
 ## References
 [1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017. 
+
 [2] L.-C. Wang, Y.-S. Chao, S.-H. Cheng, and Z. Han, “An integrated afﬁnity propagation and machine learning approach for interference management in drone base stations,” IEEE Transactions on Cognitive Communications and Networking, vol. 6, no. 1, pp. 83–94, 2019.
