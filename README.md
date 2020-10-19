@@ -44,6 +44,9 @@ In the **main.m**, we compare four methods:
 
 ![image](https://github.com/locoling/ML_for_IM_in_ASC/blob/main/similarity.png)
 
+*  Afﬁnity propagation clustering (i.e., one of the unsupervised learning techniques) is adopted to automatically determine the number of clusters and the corresponding cluster centers. Basically, the cluster center generates the strongest interference compared to other cluster members. Therefore, the identities (ID) of the cluster centers are the input parameter to adjustment operation mode.
+* According to the ID of the cluster centers, the operation mode of the interference ASCs are switchedd sleeping mode to reduce interference and improve total system throughput.
+
 ## Objective
 Our objective is to "improve the total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs".
 <img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">
