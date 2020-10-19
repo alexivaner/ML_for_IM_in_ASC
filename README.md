@@ -13,7 +13,8 @@
 ![image](https://github.com/locoling/ML_for_IM_in_ASC/blob/main/System_Architecture.png)
 
 ## Air-to-Ground Channel Model
-The 3D channel model of the 3rd Generation Partnership Project (3GPP) TR 38.901 [1] is used to simulate the link quality between aerial UAVs and ground users.
+* The 3D channel model of the 3rd Generation Partnership Project (3GPP) TR 38.901 [1] is used to simulate the link quality between aerial UAVs and ground users. (Channel_Model_3D.m)
+<img src="https://latex.codecogs.com/png.latex? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
 
 ## References
-[1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017.
+[1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017. 
