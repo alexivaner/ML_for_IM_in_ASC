@@ -36,5 +36,16 @@ In the **main.m**, we compare four methods:
 * The downlink received signal-to-interference-plus-noise ratio (SINR) for wireless communications between ASC $n$ and user $k$ over transmit power $P_{n}$ is calculated as <img src="http://chart.googleapis.com/chart?cht=tx&chl={{\Gamma }_{n,k}}=\frac{{{P}_{n}}\cdot {{H}_{n,k}}}{{{B}_{n,k}}{{N}_{0}}\dagger\sum\nolimits_{l{\ne} n}{{{P}_{l}}\cdot {{H}_{l,k}}}}\quad" style="border:none;">
 * The total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs can be obtained <img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">.
 
+## Afﬁnity Propagation Clustering Power Control
+**APC.m**
+* In our scenario, we consider the multiple users within a ASC. The similarity is deﬁned as the interference relationships S(𝑛,*l*) between ASC *l* to multiple non-served users from the neighbor ASC 𝑛, as shown in Figure. 
+* The interference relationship S(𝑛,*l*) represent the sum of the interference power. Then, we have  <img src="http://chart.googleapis.com/chart?cht=tx&chl={S(n,l)=\sum\nolimits_{{k}\in{U}_{n}}^{}{{RSRP}_{l,k}}}" style="border:none;">.
+* <img src="http://chart.googleapis.com/chart?cht=tx&chl={{k}\in{U}_{n}}" style="border:none;">  implies user 𝑘 is served by ASC 𝑛.
+
+
+
+
+
+
 ## References
 [1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017. 
