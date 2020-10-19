@@ -36,16 +36,25 @@ In the **main.m**, we compare four methods:
 * The downlink received signal-to-interference-plus-noise ratio (SINR) for wireless communications between ASC $n$ and user $k$ over transmit power $P_{n}$ is calculated as <img src="http://chart.googleapis.com/chart?cht=tx&chl={{\Gamma }_{n,k}}=\frac{{{P}_{n}}\cdot {{H}_{n,k}}}{{{B}_{n,k}}{{N}_{0}}\dagger\sum\nolimits_{l{\ne} n}{{{P}_{l}}\cdot {{H}_{l,k}}}}\quad" style="border:none;">
 * The total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs can be obtained <img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">.
 
-## Afﬁnity Propagation Clustering Power Control
+## Afﬁnity Propagation Clustering Power Control [2]
 **APC.m**
 * In our scenario, we consider the multiple users within a ASC. The similarity is deﬁned as the interference relationships S(𝑛,*l*) between ASC *l* to multiple non-served users from the neighbor ASC 𝑛, as shown in Figure. 
 * The interference relationship S(𝑛,*l*) represent the sum of the interference power. Then, we have  <img src="http://chart.googleapis.com/chart?cht=tx&chl={S(n,l)=\sum\nolimits_{{k}\in{U}_{n}}^{}{{RSRP}_{l,k}}}" style="border:none;">.
 * <img src="http://chart.googleapis.com/chart?cht=tx&chl={{k}\in{U}_{n}}" style="border:none;">  implies user 𝑘 is served by ASC 𝑛.
 
+![image](https://github.com/locoling/ML_for_IM_in_ASC/blob/main/similarity.png)
 
+## Objective
+Our objective is to "improve the total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs".
+<img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">
 
+## Simulation Result
+**main.m**
 
-
+Using two methods
+* If we use All on, the capacity is 266 Mbps in average.
+* If we use APC, the capacity is 300 Mbps in average
 
 ## References
 [1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017. 
+[2] L.-C. Wang, Y.-S. Chao, S.-H. Cheng, and Z. Han, “An integrated afﬁnity propagation and machine learning approach for interference management in drone base stations,” IEEE Transactions on Cognitive Communications and Networking, vol. 6, no. 1, pp. 83–94, 2019.
