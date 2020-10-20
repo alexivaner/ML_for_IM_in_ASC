@@ -55,7 +55,7 @@ An algorithm usually used in the clusteing problem. The interference ASCs (clust
 * Therefore, the operation mode of the interference ASCs (cluster centers) are switched to sleeping mode to reduce interference and improve total system throughput.
 
 ## Homework
-* Based on the above system model and algorithm process, the homework hope you to build the code of APC power control and evaluate the performance (total system throughput).
+* Based on the above system model and algorithm process, we hope you to build the code of APC power control and evaluate the performance (total system throughput) in this homework..
 * APC scheme compared to the baseline scheme, we expect the system transmission rate to improve by more than 10%.
 
 ## References
