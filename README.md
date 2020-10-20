@@ -44,7 +44,6 @@ An algorithm usually used in the clusteing problem. The interference ASCs (clust
 * The total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs can be obtained <img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">.
 
 ## Afﬁnity Propagation Clustering Power Control [2]
-// **APC.m**
 * In our scenario, we consider the multiple users within a ASC. The similarity is deﬁned as the interference relationships S(𝑛,*l*) between ASC *l* to multiple non-served users from the neighbor ASC 𝑛, as shown in Figure. 
 * The interference relationship S(𝑛,*l*) represent the sum of the interference power. Then, we have  <img src="http://chart.googleapis.com/chart?cht=tx&chl={S(n,l)=\sum\nolimits_{{k}\in{U}_{n}}^{}{{RSRP}_{l,k,interference}}}" style="border:none;">.
 * <img src="http://chart.googleapis.com/chart?cht=tx&chl={{k}\in{U}_{n}}" style="border:none;">  implies user 𝑘 is served by ASC 𝑛.
@@ -55,7 +54,7 @@ An algorithm usually used in the clusteing problem. The interference ASCs (clust
 * Therefore, the operation mode of the interference ASCs (cluster centers) are switched to sleeping mode to reduce interference and improve total system throughput.
 
 ## Homework
-* Based on the above system model and algorithm process, we hope you to build the code of APC power control and evaluate the performance (total system throughput) in this homework..
+* Based on the above system model and algorithm process, we hope you to build the code of APC power control and evaluate the performance (total system throughput) in this homework **(extend main.m)**.
 * APC scheme compared to the baseline scheme, we expect the system transmission rate to improve by more than 10%.
 
 ## References
