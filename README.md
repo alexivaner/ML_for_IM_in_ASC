@@ -16,10 +16,12 @@
 * The joint random waypoint mobility (RWM) and reference point group mobility (RPGM) model are adopted to determine the group’s motion behaviors.
 
 ## Start from the main.m
-In the **main.m**, we compare four methods:
+In the **main.m**, we want to compare four methods:
 
-* All on: Each cell is operated by acitive mode.
-* APC (Affinity Propagation Clustering): An algorithm usually used in the clusteing problem.
+* All on (baseline): Each cell is operated by acitive mode. (Simulation Result: the capacity is 266 Mbps in average.)
+* Affinity propagation clustering (APC) power control: **We will utility the APC algorithm to find the interference ASCs which are switched to sleeping mode to reduce interference and improve total system throughput**.
+
+An algorithm usually used in the clusteing problem. The interference ASCs (cluster centers) are switched sleeping mode 
 
 ## Air-to-Ground Channel Model
 **Channel_Model_3D.m**
@@ -42,26 +44,19 @@ In the **main.m**, we compare four methods:
 * The total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs can be obtained <img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">.
 
 ## Afﬁnity Propagation Clustering Power Control [2]
-**APC.m**
+// **APC.m**
 * In our scenario, we consider the multiple users within a ASC. The similarity is deﬁned as the interference relationships S(𝑛,*l*) between ASC *l* to multiple non-served users from the neighbor ASC 𝑛, as shown in Figure. 
-* The interference relationship S(𝑛,*l*) represent the sum of the interference power. Then, we have  <img src="http://chart.googleapis.com/chart?cht=tx&chl={S(n,l)=\sum\nolimits_{{k}\in{U}_{n}}^{}{{RSRP}_{l,k}}}" style="border:none;">.
+* The interference relationship S(𝑛,*l*) represent the sum of the interference power. Then, we have  <img src="http://chart.googleapis.com/chart?cht=tx&chl={S(n,l)=\sum\nolimits_{{k}\in{U}_{n}}^{}{{RSRP}_{l,k,interference}}}" style="border:none;">.
 * <img src="http://chart.googleapis.com/chart?cht=tx&chl={{k}\in{U}_{n}}" style="border:none;">  implies user 𝑘 is served by ASC 𝑛.
 
 ![image](https://github.com/locoling/ML_for_IM_in_ASC/blob/main/similarity.png)
 
-*  Afﬁnity propagation clustering (i.e., one of the unsupervised learning techniques) is adopted to automatically determine the number of clusters and the corresponding cluster centers. Basically, the cluster center generates the strongest interference compared to other cluster members. Therefore, the identities (ID) of the cluster centers are the input parameter to adjustment operation mode.
-* According to the ID of the cluster centers, the operation mode of the interference ASCs are switchedd sleeping mode to reduce interference and improve total system throughput.
+* Afﬁnity propagation clustering (i.e., one of the unsupervised learning techniques) is adopted to automatically determine the number of clusters and the corresponding cluster centers. Basically, the cluster center generates the strongest interference compared to other cluster members.
+* Therefore, the operation mode of the interference ASCs (cluster centers) are switched to sleeping mode to reduce interference and improve total system throughput.
 
-## Objective
-Our objective is to "improve the total system throughput 𝑅𝑐𝑎𝑝𝑎𝑐𝑖𝑡𝑦 for 𝑁 ASCs".
-<img src="http://chart.googleapis.com/chart?cht=tx&chl={{R}_{capacity}}=\sum\nolimits_{n=1}^{N}{\sum\nolimits_{k=1}^{{{U}_{n}}}{{B}_{n,k}lo{{g}_{2}}({1} \dagger {{\Gamma }_{n,k}})}}" style="border:none;">
-
-## Simulation Result
-**main.m**
-
-Using two methods
-* If we use All on, the capacity is 266 Mbps in average.
-* If we use APC, the capacity is 300 Mbps in average
+## Homework
+* Based on the above system model and algorithm process, the homework hope you to build the code of APC power control and evaluate the performance (total system throughput).
+* APC scheme compared to the baseline scheme, we expect the system transmission rate to improve by more than 10%.
 
 ## References
 [1] 3GPP, “5G; study on channel model for frequencies from 0.5 to 100 GHz,” 3rd Gener. Partnership Project, Sophia Antipolis, France, Tech. Rep. TR 38.901 V14.1.1 Release 14, Aug. 2017. 
